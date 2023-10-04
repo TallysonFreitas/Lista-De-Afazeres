@@ -1,12 +1,12 @@
 import { ThemeProvider } from 'styled-components'
 import Theme from './themes'
+import { ContainerPrincipal, EstiloGlobal } from './style'
 
 function App() {
   return (
     <ThemeProvider theme={Theme}>
-      <div>
-        <h1>ola mundo</h1>
-      </div>
+      <EstiloGlobal />
+      <ContainerPrincipal />
     </ThemeProvider>
   )
 }
