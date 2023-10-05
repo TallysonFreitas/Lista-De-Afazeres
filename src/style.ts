@@ -7,14 +7,19 @@ export const EstiloGlobal = createGlobalStyle`
   box-sizing: border-box;
   font-family:Josefin Sans;
   list-style:none;
+  font-size:18px;
+  color:white;
+}
+body{
+  background-color: ${(props) => props.theme.DarkTheme.VeryDarkBlue};
 }
 `
 
 export const ContainerPrincipal = styled.div`
-  max-width: 1440px;
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
-
+  height: 100vh;
   @media (max-width: 375px) {
     width: 100%;
   }
