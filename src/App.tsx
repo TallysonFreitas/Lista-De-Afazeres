@@ -2,6 +2,7 @@ import { ThemeProvider } from 'styled-components'
 import Theme from './themes'
 import { ContainerPrincipal, EstiloGlobal } from './style'
 import Titulo from './containers/Titulo'
+import Search from './containers/Search'
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <EstiloGlobal />
       <ContainerPrincipal>
         <Titulo />
+        <Search />
       </ContainerPrincipal>
     </ThemeProvider>
   )
