@@ -10,9 +10,12 @@ export const SContainerTitulo = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+  gap: 32px;
 `
 
-export const SIcon = styled.svg`
-  width: 64px;
-  height: 64px;
+export const SIcon = styled.button`
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  z-index: 1;
 `
