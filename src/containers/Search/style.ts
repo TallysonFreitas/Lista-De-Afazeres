@@ -29,4 +29,5 @@ export const SButton = styled.button`
   border: none;
   width: 44px;
   color: #000;
+  cursor: pointer;
 `
