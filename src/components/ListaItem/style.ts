@@ -1,15 +1,22 @@
 import styled from 'styled-components'
 
-export const STarefaItem = styled.div`
+export const STarefaItem = styled.div<TypeButtonTarefa>`
   width: 100%;
-  height: 32px;
+  height: auto;
   background-color: ${(props) => props.theme.DarkTheme.VeryDarkGrayishBlue};
-  padding: 8px;
-  color: #fff;
+  padding: 12px;
+  color: ${(props) => (props.checked ? '#aaa' : '#fff')};
   text-align: center;
   margin-bottom: 8px;
   border-radius: 8px;
   position: relative;
+  cursor: pointer;
+  text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};
+  transition: scale ease 0.2s;
+
+  &:hover {
+    scale: 1.03;
+  }
 `
 
 type TypeButtonTarefa = {
@@ -29,6 +36,13 @@ export const SButtonTarefa = styled.div<TypeButtonTarefa>`
   border-radius: 50%;
   background: ${(props) =>
     props.checked
-      ? 'linear-gradient(90deg,rgba(2, 0, 36, 1) 0%,rgba(9, 9, 121, 1) 35%,rgba(0, 212, 255, 1) 100%)'
+      ? 'linear-gradient(90deg,rgba(	71, 218, 255, 1) 0%,rgba(	192, 88, 243, 1) 100%)'
       : 'transparent'};
+  transition: all ease 0.5s;
+  &:hover {
+    border: 1px solid rgba(71, 218, 255, 1);
+  }
+  &:active {
+    border: 1px solid white;
+  }
 `
