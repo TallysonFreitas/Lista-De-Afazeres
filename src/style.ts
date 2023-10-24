@@ -1,4 +1,5 @@
 import styled, { createGlobalStyle } from 'styled-components'
+import img from './bg-desktop-dark.jpg'
 
 export const EstiloGlobal = createGlobalStyle`
 *{
@@ -16,13 +17,14 @@ body{
   &::before{
     content:'';
     width:100vw;
-    height:100vh;
-    background-image:url("../src/bg-desktop-dark.jpg");
+    height:40vh;
+    background-image:url(${img});
     background-size:cover;
     background-repeat:no-repeat;
     position:absolute;
     top:0;
     left:0;
+    z-index:-1;
   }
 }
 `
