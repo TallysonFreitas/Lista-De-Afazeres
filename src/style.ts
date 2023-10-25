@@ -12,7 +12,7 @@ export const EstiloGlobal = createGlobalStyle`
   color:white;
 }
 body{
-  background-color: ${(props) => props.theme.DarkTheme.VeryDarkBlue};
+  background-color: ${(props) => props.theme.background};
   position:relative;
   &::before{
     content:'';

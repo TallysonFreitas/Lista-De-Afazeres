@@ -3,11 +3,11 @@ import styled from 'styled-components'
 export const STarefaItem = styled.div<TypeButtonTarefa>`
   width: 100%;
   height: auto;
-  background-color: ${(props) => props.theme.DarkTheme.VeryDarkDesaturatedBlue};
+  background-color: ${(props) => props.theme.Elements};
   padding: 12px;
-  color: ${(props) => (props.checked ? '#aaa' : '#fff')};
+  color: ${(props) => (props.checked ? '#aaa' : props.theme.text)};
   text-align: center;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #ddd;
   position: relative;
   cursor: pointer;
   text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};

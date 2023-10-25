@@ -14,8 +14,11 @@ const ListaItem = ({
   const handleClickChecked = () => {
     setChecado(!checado)
   }
-  const mouseDelete = () => {
-    setInDiv(!inDiv)
+  const mouseEnterDelete = () => {
+    setInDiv(true)
+  }
+  const mouseLeaveDelete = () => {
+    setInDiv(false)
   }
 
   return (
@@ -23,8 +26,8 @@ const ListaItem = ({
       <STarefaItem
         checked={checado}
         onClick={handleClickChecked}
-        onMouseEnter={mouseDelete}
-        onMouseLeave={mouseDelete}
+        onMouseEnter={mouseEnterDelete}
+        onMouseLeave={mouseLeaveDelete}
       >
         <SButtonTarefa checked={checado} onClick={handleClickChecked}>
           {checado && (

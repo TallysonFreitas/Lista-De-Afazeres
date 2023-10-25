@@ -5,15 +5,18 @@ export const SSearchContainer = styled.div`
   display: flex;
   margin-bottom: 24px;
   position: relative;
+  box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
 `
 
 export const SSearchInput = styled.input`
   padding: 12px;
   width: 100%;
-  background-color: ${(props) => props.theme.DarkTheme.VeryDarkDesaturatedBlue};
+  background-color: ${(props) => props.theme.Elements};
   border: none;
   outline: none;
   position: relative;
+  border-radius: 8px;
+  color: ${(props) => props.theme.text};
   &::before {
     content: '0';
     position: absolute;
