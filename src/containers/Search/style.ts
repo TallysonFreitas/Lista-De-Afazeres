@@ -4,13 +4,13 @@ export const SSearchContainer = styled.div`
   width: 100%;
   display: flex;
   margin-bottom: 24px;
+  position: relative;
 `
 
 export const SSearchInput = styled.input`
   padding: 12px;
   width: 100%;
-  background-color: ${(props) => props.theme.DarkTheme.VeryDarkGrayishBlue};
-  border-radius: 8px;
+  background-color: ${(props) => props.theme.DarkTheme.VeryDarkDesaturatedBlue};
   border: none;
   outline: none;
   position: relative;
@@ -23,11 +23,15 @@ export const SSearchInput = styled.input`
 `
 
 export const SButton = styled.button`
-  padding: 12px;
   border-radius: 50%;
-  background-color: 'hsl(234, 39%, 85%)';
+  background-color: 'transparent';
   border: none;
-  width: 44px;
-  color: #000;
+  width: 24px;
   cursor: pointer;
+  position: absolute;
+  margin: auto 0;
+  right: 8px;
+  top: 0;
+  bottom: 0;
+  height: 24px;
 `

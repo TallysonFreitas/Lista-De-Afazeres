@@ -3,12 +3,11 @@ import styled from 'styled-components'
 export const STarefaItem = styled.div<TypeButtonTarefa>`
   width: 100%;
   height: auto;
-  background-color: ${(props) => props.theme.DarkTheme.VeryDarkGrayishBlue};
+  background-color: ${(props) => props.theme.DarkTheme.VeryDarkDesaturatedBlue};
   padding: 12px;
   color: ${(props) => (props.checked ? '#aaa' : '#fff')};
   text-align: center;
-  margin-bottom: 8px;
-  border-radius: 8px;
+  border-bottom: 1px solid #333;
   position: relative;
   cursor: pointer;
   text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};
@@ -16,6 +15,7 @@ export const STarefaItem = styled.div<TypeButtonTarefa>`
 
   &:hover {
     scale: 1.03;
+    border-radius: 8px;
   }
 `
 
