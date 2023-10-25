@@ -46,3 +46,22 @@ export const SButtonTarefa = styled.div<TypeButtonTarefa>`
     border: 1px solid white;
   }
 `
+
+type TButtonDelete = {
+  estado: boolean
+}
+
+export const SButtonDelete = styled.div<TButtonDelete>`
+  position: absolute;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  padding-top: 2px;
+  border-radius: 50%;
+  background: transparent;
+  transition: all ease 0.5s;
+  display: ${(props) => (props.estado ? 'flex' : 'none')};
+`
