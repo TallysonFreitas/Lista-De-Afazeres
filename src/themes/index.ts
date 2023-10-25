@@ -11,7 +11,7 @@ export const LightTheme = {
   VeryLightGrayishBlue: 'hsl(236, 33%, 92%)',
   LightGrayishBlue: 'hsl(233, 11%, 84%)',
   DarkGrayishBlue: 'hsl(236, 9%, 61%)',
-  VeryDarkGrayishBlue: 'hsl(235, 19%, 35%)'
+  gray: 'hsl(235, 19%, 35%)'
 }
 
 export const DarkTheme = {
@@ -21,7 +21,7 @@ export const DarkTheme = {
   LightGrayishBlue: 'hsl(234, 39%, 85%)',
   LightGrayishBlueHover: ' hsl(236, 33%, 92%)',
   DarkGrayishBlue: 'hsl(234, 11%, 52%)',
-  VeryDarkGrayishBlue: 'hsl(233, 14%, 35%)',
+  gray: 'hsl(233, 14%, 35%)',
   VeryDarkGrayishBluePlus: 'hsl(237, 14%, 26%)'
 }
 

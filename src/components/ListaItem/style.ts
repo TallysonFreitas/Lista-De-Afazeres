@@ -14,7 +14,7 @@ export const STarefaItem = styled.div<TypeButtonTarefa>`
   transition: scale ease 0.2s;
 
   &:hover {
-    scale: 1.03;
+    scale: 1.005;
     border-radius: 8px;
   }
 `

@@ -9,7 +9,6 @@ export const EstiloGlobal = createGlobalStyle`
   font-family:Josefin Sans;
   list-style:none;
   font-size:18px;
-  color:white;
 }
 body{
   background-color: ${(props) => props.theme.background};
