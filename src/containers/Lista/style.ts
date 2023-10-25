@@ -10,10 +10,10 @@ export const SContainerLista = styled.div`
 export const SRodapeLista = styled.div`
   display: flex;
   padding: 12px;
-  background: ${(props) => props.theme.background};
   color: ${(props) => props.theme.text};
   align-items: center;
   justify-content: space-between;
+  background-color: ${(props) => props.theme.Elements};
 `
 
 export const STextFooter = styled.p`
@@ -27,6 +27,24 @@ export const SClearButton = styled.button`
   cursor: pointer;
   font-size: 16px;
   color: ${(props) => props.theme.gray};
+  &:hover {
+    color: ${(props) => props.theme.text};
+  }
+`
+export const SContainerFilter = styled.div`
+  max-width: 20%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+`
+
+export const SFilterItem = styled.button`
+  border: none;
+  background: transparent;
+  color: ${(props) => props.theme.gray};
+  cursor: pointer;
+  padding: 4px;
+
   &:hover {
     color: ${(props) => props.theme.text};
   }

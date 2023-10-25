@@ -4,7 +4,7 @@ export const STarefaItem = styled.div<TypeButtonTarefa>`
   width: 100%;
   height: auto;
   background-color: ${(props) => props.theme.Elements};
-  padding: 12px;
+  padding: 16px;
   color: ${(props) => (props.checked ? '#aaa' : props.theme.text)};
   text-align: center;
   border-bottom: 1px solid #ddd;
