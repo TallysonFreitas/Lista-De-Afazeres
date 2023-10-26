@@ -33,7 +33,12 @@ const Lista = () => {
   return (
     <SContainerLista>
       {filtroTarefas.map((cada: tarefa) => (
-        <ListaItem key={cada.id} item={cada} />
+        <ListaItem
+          key={cada.id}
+          active={cada.active}
+          id={cada.id}
+          titulo={cada.titulo}
+        />
       ))}
       <SRodapeLista>
         <STextFooter>{filtroTarefas.length} items left</STextFooter>
