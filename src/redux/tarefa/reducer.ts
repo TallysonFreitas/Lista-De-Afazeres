@@ -14,7 +14,7 @@ const initialState = {
 }
 
 const tarefaReducer = (state = initialState, action: any) => {
-  if (action.type === 'tarefa/check') {
+  if (action.type == 'tarefa/check') {
     return {
       ...state,
       current: state.current.map((each) =>
@@ -22,14 +22,21 @@ const tarefaReducer = (state = initialState, action: any) => {
       )
     }
   }
-  if (action.type === 'tarefa/add') {
+  if (action.type == 'tarefa/add') {
     return {
       ...state,
       current: [...state.current, action.payload]
     }
   }
-  if (action.type === 'tarefa/remove') {
-    return { ...state }
+  if (action.type == 'tarefa/remove') {
+    return {
+      ...state,
+      current: [
+        { titulo: 'Road for 1 hour', id: 4, active: false },
+        { titulo: 'Pick up groceries', id: 5, active: true },
+        { titulo: 'Complete Todo App on Frontend Mentor', id: 6, active: false }
+      ]
+    }
   }
   return state
 }

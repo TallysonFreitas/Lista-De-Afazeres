@@ -51,7 +51,7 @@ type TButtonDelete = {
   estado: boolean
 }
 
-export const SButtonDelete = styled.div<TButtonDelete>`
+export const SButtonDelete = styled.button<TButtonDelete>`
   position: absolute;
   right: 8px;
   width: 24px;

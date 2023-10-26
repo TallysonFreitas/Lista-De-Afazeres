@@ -11,12 +11,13 @@ import {
 
 import { useSelector } from 'react-redux'
 
+export type tarefa = {
+  titulo: string
+  id: number
+  active: boolean
+}
+
 const Lista = () => {
-  type tarefa = {
-    titulo: string
-    id: number
-    active: boolean
-  }
   const { current } = useSelector(
     (rootReducer: any) => rootReducer.tarefaReducer
   )
@@ -30,9 +31,12 @@ const Lista = () => {
   return (
     <SContainerLista>
       {filtroTarefas.map((cada: tarefa) => (
-        <ListaItem key={cada.id} checked={cada.active}>
-          {cada.titulo}
-        </ListaItem>
+        <ListaItem
+          key={cada.id}
+          active={cada.active}
+          id={cada.id}
+          titulo={cada.titulo}
+        />
       ))}
       <SRodapeLista>
         <STextFooter>{filtroTarefas.length} items left</STextFooter>
