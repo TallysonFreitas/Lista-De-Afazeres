@@ -9,7 +9,7 @@ import {
   STextFooter
 } from './style'
 
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 export type tarefa = {
   titulo: string
@@ -21,18 +21,15 @@ const Lista = () => {
   const { currentTarefas } = useSelector(
     (rootReducer: any) => rootReducer.tarefaReducer
   )
-
-  const [filtroTarefas, setFiltroTarefas] = useState(currentTarefas)
+  const dispatch = useDispatch()
 
   const RetiraTarefasCompletas = () => {
-    setFiltroTarefas(
-      currentTarefas.filter((cada: tarefa) => cada.active == false)
-    )
+    dispatch({ type: 'tarefa/restantes' })
   }
 
   return (
     <SContainerLista>
-      {filtroTarefas.map((cada: tarefa) => (
+      {currentTarefas.map((cada: tarefa) => (
         <ListaItem
           key={cada.id}
           active={cada.active}
@@ -41,7 +38,7 @@ const Lista = () => {
         />
       ))}
       <SRodapeLista>
-        <STextFooter>{filtroTarefas.length} items left</STextFooter>
+        <STextFooter>{currentTarefas.length} items left</STextFooter>
         <SContainerFilter>
           <SFilterItem>All</SFilterItem>
           <SFilterItem>Active</SFilterItem>
