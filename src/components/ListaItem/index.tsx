@@ -3,13 +3,17 @@ import { SButtonDelete, SButtonTarefa, STarefaItem } from './style'
 import { useDispatch } from 'react-redux'
 import { tarefa } from '../../containers/Lista'
 
-const ListaItem = (cadaTarefa: tarefa) => {
-  const [checado, setChecado] = useState(cadaTarefa.active)
+const ListaItem = (props: tarefa) => {
+  const [checado, setChecado] = useState(props.active)
   const [inDiv, setInDiv] = useState(false)
   const dispatch = useDispatch()
 
   const handleClickChecked = () => {
     setChecado(!checado)
+    dispatch({
+      type: 'tarefa/check',
+      payload: { titulo: props.titulo, id: props.id, active: !props.active }
+    })
   }
   const mouseEnterDelete = () => {
     setInDiv(true)
@@ -21,7 +25,6 @@ const ListaItem = (cadaTarefa: tarefa) => {
   return (
     <STarefaItem
       checked={checado}
-      onClick={handleClickChecked}
       onMouseEnter={mouseEnterDelete}
       onMouseLeave={mouseLeaveDelete}
     >
@@ -37,7 +40,7 @@ const ListaItem = (cadaTarefa: tarefa) => {
           </svg>
         )}
       </SButtonTarefa>
-      {cadaTarefa.titulo}
+      {props.titulo}
       <SButtonDelete estado={inDiv}>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
           <path
