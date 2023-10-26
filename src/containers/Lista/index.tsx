@@ -27,6 +27,10 @@ const Lista = () => {
     dispatch({ type: 'tarefa/restantes' })
   }
 
+  const MostraTodasTarefas = () => {
+    dispatch({ type: 'tarefa/todas' })
+  }
+
   return (
     <SContainerLista>
       {currentTarefas.map((cada: tarefa) => (
@@ -40,7 +44,7 @@ const Lista = () => {
       <SRodapeLista>
         <STextFooter>{currentTarefas.length} items left</STextFooter>
         <SContainerFilter>
-          <SFilterItem>All</SFilterItem>
+          <SFilterItem onClick={MostraTodasTarefas}>All</SFilterItem>
           <SFilterItem>Active</SFilterItem>
           <SFilterItem>Completed</SFilterItem>
         </SContainerFilter>
