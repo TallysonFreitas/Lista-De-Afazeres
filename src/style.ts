@@ -29,7 +29,7 @@ body{
 `
 
 export const ContainerPrincipal = styled.div`
-  max-width: 1000px;
+  max-width: 640px;
   width: 100%;
   margin: 0 auto;
   display: flex;

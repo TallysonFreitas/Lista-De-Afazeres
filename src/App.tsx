@@ -7,7 +7,7 @@ import Lista from './containers/Lista'
 import { useState } from 'react'
 
 function App() {
-  const [estaUsandoDark, setEstaUsandoDark] = useState(true)
+  const [estaUsandoDark, setEstaUsandoDark] = useState(false)
 
   return (
     <ThemeProvider theme={estaUsandoDark ? DarkTheme : LightTheme}>

@@ -3,7 +3,7 @@ import { SContainerTitulo, SIcon, STitulo } from './style'
 const Titulo = () => {
   return (
     <SContainerTitulo>
-      <STitulo>TO DO</STitulo>
+      <STitulo>T O D O</STitulo>
       <SIcon>
         <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26">
           <path

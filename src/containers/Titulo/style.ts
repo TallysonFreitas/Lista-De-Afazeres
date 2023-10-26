@@ -9,7 +9,7 @@ export const SContainerTitulo = styled.div`
   margin: 0 auto;
   width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   gap: 32px;
 `
 
