@@ -1,8 +1,18 @@
 import { useState } from 'react'
 import { SButton, SSearchContainer, SSearchInput } from './style'
+import { useDispatch } from 'react-redux'
 
 const Search = () => {
   const [tarefa, setTarefa] = useState('')
+
+  const dispatch = useDispatch()
+
+  const AddTask = () => {
+    dispatch({
+      type: 'tarefa/add',
+      payload: { titulo: tarefa, active: false, id: 123 }
+    })
+  }
 
   const setTarefaValue = (e: any) => {
     setTarefa(e.target.value)
@@ -12,7 +22,7 @@ const Search = () => {
     <SSearchContainer>
       <SSearchInput type="text" placeholder="|" onChange={setTarefaValue} />
       {tarefa.length >= 1 && (
-        <SButton type="submit">
+        <SButton type="submit" onClick={AddTask}>
           <svg xmlns="http://www.w3.org/2000/svg" width="11" height="9">
             <path
               fill="none"
