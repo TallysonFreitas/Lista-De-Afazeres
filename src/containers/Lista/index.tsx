@@ -31,6 +31,10 @@ const Lista = () => {
     dispatch({ type: 'tarefa/todas' })
   }
 
+  const MostraTarefasAtivas = () => {
+    dispatch({ type: 'tarefa/ativas' })
+  }
+
   return (
     <SContainerLista>
       {currentTarefas.map((cada: tarefa) => (
@@ -45,8 +49,8 @@ const Lista = () => {
         <STextFooter>{currentTarefas.length} items left</STextFooter>
         <SContainerFilter>
           <SFilterItem onClick={MostraTodasTarefas}>All</SFilterItem>
-          <SFilterItem>Active</SFilterItem>
-          <SFilterItem>Completed</SFilterItem>
+          <SFilterItem onClick={RetiraTarefasCompletas}>Active</SFilterItem>
+          <SFilterItem onClick={MostraTarefasAtivas}>Completed</SFilterItem>
         </SContainerFilter>
         <SClearButton onClick={RetiraTarefasCompletas}>
           Clear Completed

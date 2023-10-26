@@ -55,6 +55,11 @@ const tarefaReducer = (state = initialState, action: any) => {
         ...state,
         currentTarefas: state.allTarefas
       }
+    case 'tarefa/ativas':
+      return {
+        ...state,
+        currentTarefas: state.allTarefas.filter((each) => each.active == true)
+      }
 
     default:
       return { ...state }
