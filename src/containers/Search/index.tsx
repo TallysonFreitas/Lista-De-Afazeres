@@ -10,7 +10,7 @@ const Search = () => {
   const AddTask = () => {
     dispatch({
       type: 'tarefa/add',
-      payload: { titulo: tarefa, active: false, id: 123 }
+      payload: { titulo: tarefa, active: false, id: 111 }
     })
   }
 

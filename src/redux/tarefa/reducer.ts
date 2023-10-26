@@ -44,7 +44,15 @@ const tarefaReducer = (state = initialState, action: any) => {
         allTarefas: [...state.allTarefas, action.payload]
       }
     case 'tarefa/remove':
-      return { ...state }
+      return {
+        ...state,
+        currentTarefas: state.currentTarefas.filter(
+          (each) => each.id !== action.payload.id
+        ),
+        allTarefas: state.allTarefas.filter(
+          (each) => each.id !== action.payload.id
+        )
+      }
     case 'tarefa/restantes':
       return {
         ...state,

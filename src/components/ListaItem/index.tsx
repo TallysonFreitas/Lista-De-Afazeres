@@ -21,6 +21,12 @@ const ListaItem = (props: tarefa) => {
   const mouseLeaveDelete = () => {
     setInDiv(false)
   }
+  const DeleteTask = () => {
+    dispatch({
+      type: 'tarefa/remove',
+      payload: { titulo: props.titulo, id: props.id, active: props.active }
+    })
+  }
 
   return (
     <STarefaItem
@@ -41,7 +47,7 @@ const ListaItem = (props: tarefa) => {
         )}
       </SButtonTarefa>
       {props.titulo}
-      <SButtonDelete estado={inDiv}>
+      <SButtonDelete estado={inDiv} onClick={DeleteTask}>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
           <path
             fill="#494C6B"
