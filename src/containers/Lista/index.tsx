@@ -17,14 +17,14 @@ const Lista = () => {
     id: number
     active: boolean
   }
-  const { Tarefas } = useSelector(
+  const { current } = useSelector(
     (rootReducer: any) => rootReducer.tarefaReducer
   )
 
-  const [filtroTarefas, setFiltroTarefas] = useState(Tarefas)
+  const [filtroTarefas, setFiltroTarefas] = useState(current)
 
   const RetiraTarefasCompletas = () => {
-    setFiltroTarefas(Tarefas.filter((cada: tarefa) => cada.active == false))
+    setFiltroTarefas(current.filter((cada: tarefa) => cada.active == false))
   }
 
   return (
