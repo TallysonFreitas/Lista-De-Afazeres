@@ -48,4 +48,7 @@ export const SFilterItem = styled.button`
   &:hover {
     color: ${(props) => props.theme.text};
   }
+  &:select {
+    color: ${(props) => props.theme.BrightBlue};
+  }
 `

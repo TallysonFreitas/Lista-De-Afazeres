@@ -9,34 +9,27 @@ import {
   STextFooter
 } from './style'
 
+import { useSelector } from 'react-redux'
+
 const Lista = () => {
   type tarefa = {
     titulo: string
     id: number
     active: boolean
   }
-  const Tarefas: tarefa[] = [
-    {
-      titulo: 'Complete online JavaScript courses',
-      id: 1,
-      active: true
-    },
-    { titulo: 'Jog around the park 3x', id: 2, active: false },
-    { titulo: '10 minutes meditation', id: 3, active: false },
-    { titulo: 'Road for 1 hour', id: 4, active: false },
-    { titulo: 'Pick up groceries', id: 5, active: true },
-    { titulo: 'Complete Todo App on Frontend Mentor', id: 6, active: false }
-  ]
+  const { Tarefas } = useSelector(
+    (rootReducer: any) => rootReducer.tarefaReducer
+  )
 
   const [filtroTarefas, setFiltroTarefas] = useState(Tarefas)
 
   const RetiraTarefasCompletas = () => {
-    setFiltroTarefas(Tarefas.filter((cada) => cada.active == false))
+    setFiltroTarefas(Tarefas.filter((cada: tarefa) => cada.active == false))
   }
 
   return (
     <SContainerLista>
-      {filtroTarefas.map((cada) => (
+      {filtroTarefas.map((cada: tarefa) => (
         <ListaItem key={cada.id} checked={cada.active}>
           {cada.titulo}
         </ListaItem>
