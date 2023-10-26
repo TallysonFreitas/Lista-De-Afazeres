@@ -11,28 +11,29 @@ import {
 
 import { useSelector } from 'react-redux'
 
+export type tarefa = {
+  titulo: string
+  id: number
+  active: boolean
+}
+
 const Lista = () => {
-  type tarefa = {
-    titulo: string
-    id: number
-    active: boolean
-  }
-  const { Tarefas } = useSelector(
+  const { currentTarefas } = useSelector(
     (rootReducer: any) => rootReducer.tarefaReducer
   )
 
-  const [filtroTarefas, setFiltroTarefas] = useState(Tarefas)
+  const [filtroTarefas, setFiltroTarefas] = useState(currentTarefas)
 
   const RetiraTarefasCompletas = () => {
-    setFiltroTarefas(Tarefas.filter((cada: tarefa) => cada.active == false))
+    setFiltroTarefas(
+      currentTarefas.filter((cada: tarefa) => cada.active == false)
+    )
   }
 
   return (
     <SContainerLista>
       {filtroTarefas.map((cada: tarefa) => (
-        <ListaItem key={cada.id} checked={cada.active}>
-          {cada.titulo}
-        </ListaItem>
+        <ListaItem key={cada.id} item={cada} />
       ))}
       <SRodapeLista>
         <STextFooter>{filtroTarefas.length} items left</STextFooter>

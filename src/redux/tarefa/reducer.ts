@@ -1,5 +1,5 @@
 const initialState = {
-  current: [
+  currentTarefas: [
     {
       titulo: 'Complete online JavaScript courses',
       id: 1,
@@ -17,7 +17,7 @@ const tarefaReducer = (state = initialState, action: any) => {
   if (action.type === 'tarefa/check') {
     return {
       ...state,
-      current: state.current.map((each) =>
+      currentTarefas: state.currentTarefas.map((each) =>
         each.id === action.payload.id ? action.payload : each
       )
     }
@@ -25,7 +25,7 @@ const tarefaReducer = (state = initialState, action: any) => {
   if (action.type === 'tarefa/add') {
     return {
       ...state,
-      current: [...state.current, action.payload]
+      currentTarefas: [...state.currentTarefas, action.payload]
     }
   }
   if (action.type === 'tarefa/remove') {
