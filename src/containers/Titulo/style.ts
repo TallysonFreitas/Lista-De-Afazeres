@@ -6,7 +6,7 @@ export const STitulo = styled.h1`
 `
 
 export const SContainerTitulo = styled.div`
-  margin: 0 auto;
+  margin: 0 auto 24px;
   width: 100%;
   display: flex;
   justify-content: space-between;

@@ -11,7 +11,7 @@ function App() {
 
   return (
     <ThemeProvider theme={estaUsandoDark ? DarkTheme : LightTheme}>
-      <EstiloGlobal />
+      <EstiloGlobal tema={estaUsandoDark} />
       <ContainerPrincipal>
         <Titulo />
         <Search />

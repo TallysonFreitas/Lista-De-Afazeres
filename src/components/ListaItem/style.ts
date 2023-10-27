@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const STarefaItem = styled.div<TypeButtonTarefa>`
   width: 100%;
-  height: auto;
   background-color: ${(props) => props.theme.Elements};
   padding: 16px;
   color: ${(props) => (props.checked ? '#aaa' : props.theme.text)};
@@ -12,6 +11,7 @@ export const STarefaItem = styled.div<TypeButtonTarefa>`
   cursor: pointer;
   text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};
   transition: scale ease 0.2s;
+  transition: height ease 2s;
 
   &:hover {
     scale: 1.005;

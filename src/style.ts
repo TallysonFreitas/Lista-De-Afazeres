@@ -1,7 +1,12 @@
 import styled, { createGlobalStyle } from 'styled-components'
-import img from './bg-desktop-dark.jpg'
+import imgDark from './images/bg-desktop-dark.jpg'
+import imgLight from './images/bg-desktop-light.jpg'
 
-export const EstiloGlobal = createGlobalStyle`
+type ThemeType = {
+  tema: boolean
+}
+
+export const EstiloGlobal = createGlobalStyle<ThemeType>`
 *{
   margin: 0;
   padding:0;
@@ -17,7 +22,8 @@ body{
     content:'';
     width:100vw;
     height:40vh;
-    background-image:url(${img});
+  background-image:${(props) =>
+    props.tema == true ? `url(${imgDark})` : `url(${imgLight})`};
     background-size:cover;
     background-repeat:no-repeat;
     position:absolute;
