@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { SButtonDelete, SButtonTarefa, STarefaItem } from './style'
+import { SButtonDelete, SButtonTarefa, STarefaItem, SListaText } from './style'
 import { useDispatch } from 'react-redux'
 import { tarefa } from '../../containers/Lista'
 
@@ -46,7 +46,7 @@ const ListaItem = (props: tarefa) => {
           </svg>
         )}
       </SButtonTarefa>
-      {props.titulo}
+      <SListaText>{props.titulo}</SListaText>
       <SButtonDelete estado={inDiv} onClick={DeleteTask}>
         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18">
           <path

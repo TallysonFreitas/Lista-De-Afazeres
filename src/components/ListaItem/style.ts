@@ -65,3 +65,8 @@ export const SButtonDelete = styled.div<TButtonDelete>`
   transition: all ease 0.5s;
   display: ${(props) => (props.estado ? 'flex' : 'none')};
 `
+
+export const SListaText = styled.p`
+  max-width: 90%;
+  margin: 0 auto;
+`
