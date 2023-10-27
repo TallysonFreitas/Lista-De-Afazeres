@@ -14,11 +14,20 @@ export const SRodapeLista = styled.div`
   align-items: center;
   justify-content: space-between;
   background-color: ${(props) => props.theme.Elements};
+  @media (max-width: 648px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "text clear"
+    "filter filter"
 `
 
 export const STextFooter = styled.p`
   color: ${(props) => props.theme.gray};
   font-size: 16px;
+  @media (max-width: 648px) {
+    padding: 8px;
+  }
 `
 
 export const SClearButton = styled.button`
@@ -30,12 +39,24 @@ export const SClearButton = styled.button`
   &:hover {
     color: ${(props) => props.theme.text};
   }
+  @media (max-width: 648px) {
+    padding: 8px;
+  }
 `
 export const SContainerFilter = styled.div`
   max-width: 20%;
   width: 100%;
   display: flex;
   justify-content: space-between;
+  @media (max-width: 648px) {
+    max-width: 100%;
+    order: 2;
+    margin: 0 auto;
+    grid-area: filter;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 24px;
+  }
 `
 
 export const SFilterItem = styled.button`
