@@ -10,13 +10,12 @@ export const STarefaItem = styled.div<TypeButtonTarefa>`
   position: relative;
   cursor: pointer;
   text-decoration: ${(props) => (props.checked ? 'line-through' : 'none')};
-  transition: scale ease 0.2s;
-  transition: height ease 2s;
 
   &:hover {
-    scale: 1.005;
-    border-radius: 8px;
+    scale: 1.008;
   }
+  transition: scale ease 0.1s;
+  transition: height ease 2s;
 `
 
 type TypeButtonTarefa = {
