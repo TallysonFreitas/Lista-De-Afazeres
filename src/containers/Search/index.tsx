@@ -10,7 +10,11 @@ const Search = () => {
   const AddTask = () => {
     dispatch({
       type: 'tarefa/add',
-      payload: { titulo: tarefa, active: false, id: 111 }
+      payload: {
+        titulo: tarefa,
+        active: false,
+        id: Math.floor(Math.random() * 1000)
+      }
     })
   }
 
