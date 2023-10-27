@@ -8,12 +8,15 @@ import { useState } from 'react'
 
 function App() {
   const [estaUsandoDark, setEstaUsandoDark] = useState(false)
+  const MudaTema = () => {
+    setEstaUsandoDark(!estaUsandoDark)
+  }
 
   return (
     <ThemeProvider theme={estaUsandoDark ? DarkTheme : LightTheme}>
       <EstiloGlobal tema={estaUsandoDark} />
       <ContainerPrincipal>
-        <Titulo />
+        <Titulo tema={MudaTema} />
         <Search />
         <Lista />
       </ContainerPrincipal>
