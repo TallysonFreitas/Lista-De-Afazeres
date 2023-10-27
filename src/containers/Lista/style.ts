@@ -5,6 +5,15 @@ export const SContainerLista = styled.div`
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   overflow: hidden;
+  @keyframes SlideTop {
+    from {
+      transform: translateY(200px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
+  animation: SlideTop ease 0.6s;
 `
 
 export const SRodapeLista = styled.div`

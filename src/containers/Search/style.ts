@@ -1,11 +1,20 @@
 import styled from 'styled-components'
 
 export const SSearchContainer = styled.div`
+  @keyframes SlideTop {
+    from {
+      transform: translateY(200px);
+    }
+    to {
+      transform: translateY(0px);
+    }
+  }
   width: 100%;
   display: flex;
   margin-bottom: 24px;
   position: relative;
   box-shadow: 0px 0px 16px rgba(0, 0, 0, 0.1);
+  animation: SlideTop ease 0.5s;
 `
 
 export const SSearchInput = styled.input`
